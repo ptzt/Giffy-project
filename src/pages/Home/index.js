@@ -1,7 +1,8 @@
 import React, { useEffect,useState } from 'react';
 import { Link, useLocation } from 'wouter'
-import ListOfGifs from '../../components/ListOfGifs'
-import {useGifs} from '../../hooks/useGifs';
+import ListOfGifs from 'components/ListOfGifs'
+import {useGifs} from 'hooks/useGifs';
+import TrendingSearches from 'components/TrendingSearches';
 
 export default function Home() {
     const [ keyword, setKeyword ] = useState('')
@@ -27,7 +28,7 @@ export default function Home() {
         </form>
         <h3 className="App-title">Ultima busqueda</h3>
         <ListOfGifs gifs={gifs}/>
-        
+        <TrendingSearches />        
         </>
     )
 }
